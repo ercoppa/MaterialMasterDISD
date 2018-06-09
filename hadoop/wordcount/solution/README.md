@@ -1,4 +1,9 @@
 ## Esecuzione locale senza Apache Hadoop
 
-`cat ../datasets/mid.txt | python mapper.py | sort | python reducer.py | sort`
+`make local`
 
+## Esecution locale con Apache Hadoop
+
+`make clean`
+`make input`
+`make hadoop`
