@@ -9,4 +9,12 @@
 
 # Esecuzione
 
+* esecuzione locale senza Hadoop:
 
+`make local`
+
+* esecuzione locale con Hadoop
+
+`make clean`
+`make input`
+`make hadoop`
