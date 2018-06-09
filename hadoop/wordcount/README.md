@@ -16,5 +16,7 @@
 * esecuzione locale con Hadoop
 
 `make clean`
+
 `make input`
+
 `make hadoop`
