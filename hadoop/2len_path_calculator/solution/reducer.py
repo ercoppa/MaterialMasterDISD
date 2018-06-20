@@ -4,7 +4,7 @@ import sys
 
 neighbors = set()
 lastKey = None
-total_count = 0
+# total_count = 0
 
 def compute_len2(node, neighbors):
     count = 0
@@ -29,7 +29,7 @@ for line in sys.stdin:
         if key != lastKey:
             if lastKey is not None:
                 n = compute_len2(lastKey, neighbors)
-                #print '%s %d' % (lastKey, n)
+                print '%s %d' % (lastKey, n)
             lastKey = key
             neighbors = set()
 
@@ -40,6 +40,6 @@ for line in sys.stdin:
 
 if lastKey is not None:
     n = compute_len2(lastKey, neighbors)
-    #print '%s %d' % (lastKey, n)
+    print '%s %d' % (lastKey, n)
 
-print total_count
+#print total_count
