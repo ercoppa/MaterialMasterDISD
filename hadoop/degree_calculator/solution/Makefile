@@ -1,8 +1,8 @@
 local:
-	cat ../datasets/facebook.txt | python mapper.py | sort | python reducer.py| sort
+	cat ../datasets/facebook.txt | python mapper.py | sort -n | python reducer.py| sort
 
 hadoop:
-	hadoop jar ${HADOOP_HOME}/share/hadoop/tools/lib/hadoop-streaming-2.7.2.jar  -files mapper.py,reducer.py -mapper mapper.py -reducer reducer.py -input /wc-in -output /wc-out
+	hadoop jar ${HADOOP_HOME}/share/hadoop/tools/lib/hadoop-streaming-2.7.2.jar  -files mapper.py,reducer.py -mapper mapper.py -reducer reducer.py -input /dc-in -output /dc-out
 
 input:
 	hdfs dfs -rm -r /dc-in
