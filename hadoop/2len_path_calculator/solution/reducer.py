@@ -4,7 +4,7 @@ import sys
 
 neighbors = set()
 lastKey = None
-# total_count = 0
+# total_count = 0 # this works only if there is a single reducer!
 
 def compute_len2(node, neighbors):
     count = 0
@@ -15,8 +15,8 @@ def compute_len2(node, neighbors):
                 #print "Path: (%s %s %s)" % (neighbors[u], node, neighbors[w])
                 count += 1
 
-    global total_count
-    total_count += count
+    #global total_count
+    #total_count += count
     return count
 
 for line in sys.stdin:
