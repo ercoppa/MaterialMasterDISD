@@ -1,5 +1,5 @@
 local:
-	cat datasets/mid.txt | python mapper.py | sort | python reducer.py| sort
+	cat ../datasets/mid.txt | python mapper.py | sort | python reducer.py| sort
 
 hadoop:
 	hadoop jar ${HADOOP_HOME}/share/hadoop/tools/lib/hadoop-streaming-*.jar  -files mapper.py,reducer.py -mapper mapper.py -reducer reducer.py -input /wc-in -output /wc-out
@@ -7,7 +7,7 @@ hadoop:
 input:
 	hdfs dfs -rm -r -f /wc-in
 	hdfs dfs -mkdir /wc-in
-	hdfs dfs -copyFromLocal datasets/mid.txt /wc-in/
+	hdfs dfs -copyFromLocal ../datasets/mid.txt /wc-in/
 
 clean:
 	hdfs dfs -rm -r /wc-out
