@@ -11,4 +11,4 @@ for line in sys.stdin:
             word = word.lower()
             word = word.strip(string.punctuation)
             if len(word) > 0:
-                print '%s %d' % (word, 1)
+                print '%s\t%d' % (word, 1)
