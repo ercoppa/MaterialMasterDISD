@@ -11,4 +11,4 @@ for line in sys.stdin:
     if len(nodes) != 2:
         # print "Invalid edge: " + edge
         continue
-    print '%s %s' % (nodes[0], nodes[1])
+    print '%s\t%s' % (nodes[0], nodes[1])

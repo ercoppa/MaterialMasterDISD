@@ -29,7 +29,7 @@ for line in sys.stdin:
         if key != lastKey:
             if lastKey is not None:
                 n = compute_len2(lastKey, neighbors)
-                print '%s %d' % (lastKey, n)
+                print '%s\t%d' % (lastKey, n)
             lastKey = key
             neighbors = set()
 
@@ -40,6 +40,6 @@ for line in sys.stdin:
 
 if lastKey is not None:
     n = compute_len2(lastKey, neighbors)
-    print '%s %d' % (lastKey, n)
+    print '%s\t%d' % (lastKey, n)
 
 #print total_count

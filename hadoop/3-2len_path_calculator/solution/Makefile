@@ -1,5 +1,5 @@
 local:
-	cat ../datasets/test.dat | python mapper.py | sort -n | python reducer.py| sort
+	cat ../datasets/test.dat | python mapper.py | sort -n | python reducer.py| sort -n
 
 hadoop:
 	hadoop jar ${HADOOP_HOME}/share/hadoop/tools/lib/hadoop-streaming-*.jar  -files mapper.py,reducer.py -mapper mapper.py -reducer reducer.py -input /p2-in -output /p2-out
