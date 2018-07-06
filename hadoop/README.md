@@ -5,7 +5,7 @@
 ```
 > start-all.sh
 ```
-Or, you can start them separately:
+Or, to start them separately:
 ```
 > start-dfs.sh
 > start-yarn.sh
@@ -50,7 +50,7 @@ where `datasets/mid.txt` is path to a file on the local filesystem and `/wc-in` 
 hadoop jar ${HADOOP_HOME}/share/hadoop/tools/lib/hadoop-streaming-*.jar  -files mapper.py,reducer.py -mapper mapper.py -reducer reducer.py -input /wc-in -output /wc-out
 ```
 where:
- *  `mapper.py` and `reducer.py` are the implementation of the mapper and reducer function stored in the current directory
+ *  `mapper.py` and `reducer.py` are the Python implementations of the mapper and reducer functions stored in the current directory
  * `/wc-in` is the input directory for the Hadoop job
  * `/wc-out` is the output directory for the Hadoop job
 
@@ -70,7 +70,7 @@ where `/wc-out` is the directory on the HDFS that we want to export and `.` is t
 ```
 > stop-all.sh
 ```
-Or, you can start them separately:
+Or, to stop them separately:
 ```
 > stop-dfs.sh
 > stop-yarn.sh
