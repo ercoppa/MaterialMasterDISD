@@ -1,4 +1,4 @@
-REGISTER lib/pigtest/myudfs.jar;
+REGISTER lib/myudfs.jar;
 
 -- load the test file into Pig
 raw = LOAD '$INPUT' USING TextLoader as (line:chararray);
