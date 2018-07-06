@@ -21,6 +21,8 @@ Try use jps to see if everything is fine. You should get something like:
 <PID_NUMBER> NameNode
 ```
 
+
+
 * To create a directory on HDFS:
 ```
 > hdfs dfs -mkdir /wc-in
