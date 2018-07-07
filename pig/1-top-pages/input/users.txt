@@ -1,0 +1,10 @@
+Tizio	18
+Caio	22
+Sempronio	41
+Luca	71
+Mario	19
+Luigi	72
+Luciano	54
+Ernesto	24
+Daniele	20
+Claudio	23
