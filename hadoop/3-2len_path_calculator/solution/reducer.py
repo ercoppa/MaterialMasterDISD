@@ -21,7 +21,7 @@ def compute_len2(node, neighbors):
 
 for line in sys.stdin:
     line = line.strip()
-    key, value = line.split(' ')
+    key, value = line.split('\t')
     try:
         if value == lastKey: # skip self edges
             continue
