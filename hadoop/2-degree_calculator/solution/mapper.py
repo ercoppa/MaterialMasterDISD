@@ -4,8 +4,8 @@ import sys		# sys.stdin
 
 for line in sys.stdin:
     edge = line.rstrip("\n").strip()
-    if ' ' in edge:
-        nodes = edge.split(" ")
+    if '\t' in edge:
+        nodes = edge.split("\t")
     else:
         nodes = edge.split(":")
     if len(nodes) != 2:
